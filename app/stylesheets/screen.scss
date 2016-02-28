@@ -1,0 +1,14 @@
+// IMPORTS
+// ======================================================
+@import "partials/normalize";
+@import "partials/variables";
+
+// VARIABLES
+// ======================================================
+$background-color: #ebebeb;
+
+// GLOBAL STYLES
+// ======================================================
+body {
+  background: $background-color;
+}
