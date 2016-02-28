@@ -28,6 +28,14 @@ npm run lint
 
 You may want to change the host in `server.js` and `webpack.config.babel.js` from `localhost` to `0.0.0.0` to allow access from same WiFi network. This is not enabled by default because it is reported to cause problems on Windows. This may also be useful if you're using a VM.
 
+### Stack includes:
+
+* [React.js](https://facebook.github.io/react/)
+* [Webpack](https://webpack.github.io/)
+* [Babeljs](https://babeljs.io/)
+* [Sass](http://sass-lang.com/): using libsass via [node-sass](https://github.com/sass/node-sass)
+* [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/)
+
 ### Credits
 
 This project is heavily influenced by:

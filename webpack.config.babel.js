@@ -5,6 +5,14 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import csswring from 'csswring';
 import autoprefixer from 'autoprefixer-core';
 
+// for Bourbon & Neat to be added to style loader below
+import bourbon from 'node-bourbon';
+import neat from 'node-neat';
+var bourbonNeatPaths = (a, b) => {
+  return '?includePaths[]=' + encodeURIComponent(a.includePaths) +
+         '&includePaths[]=' + encodeURIComponent(b.includePaths[1])
+}
+
 const config = {
   devtool: 'eval',
   entry: [
@@ -33,7 +41,7 @@ const config = {
       },
       {
         test: /\.scss$/,
-        loader: 'style!css!postcss!sass'
+        loader: 'style!css!postcss!sass' + bourbonNeatPaths(bourbon, neat)
       }
     ]
   }
