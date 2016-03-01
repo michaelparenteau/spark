@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import Icon from 'react-fa';
 
 require('./sampleComponent.scss');
