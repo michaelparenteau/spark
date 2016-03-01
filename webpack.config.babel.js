@@ -26,7 +26,8 @@ const config = {
     publicPath: '/static/'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new ExtractTextPlugin('bundle.css')
   ],
   sassLoader: {
     includePaths: [path.resolve(__dirname, './app/stylesheets')]
@@ -42,6 +43,18 @@ const config = {
       {
         test: /\.scss$/,
         loader: 'style!css!postcss!sass' + bourbonNeatPaths(bourbon, neat)
+      },
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader')
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader?limit=10000&minetype=application/font-woff'
+      },
+      {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader'
       }
     ]
   }

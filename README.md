@@ -35,6 +35,7 @@ You may want to change the host in `server.js` and `webpack.config.babel.js` fro
 * [Babeljs](https://babeljs.io/)
 * [Sass](http://sass-lang.com/): using libsass via [node-sass](https://github.com/sass/node-sass)
 * [Bourbon](http://bourbon.io/) and [Neat](http://neat.bourbon.io/)
+* [Font Awesome](http://fontawesome.io) via [react-fa](https://www.npmjs.com/package/react-fa)
 
 ### Credits
 
