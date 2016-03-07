@@ -1,23 +1,36 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {createStore} from 'redux';
 import {Provider} from 'react-redux';
-
+import { Router, Route, browserHistory } from 'react-router';
+import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
 import App from './containers/app';
-import reducers from 'reducers';
-
+import Routes from './routes';
+import DevTools from './containers/DevTools';
+import configureStore from './store'
 // global styles
 import styles from './stylesheets/screen.scss';
-
-// components
-//import SampleComponent from './components/sampleComponent/sampleComponent';
+// font-awesome
 require("font-awesome-loader");
 
-const initialState = window.INITIAL_STATE || {messages: [], currentMessage: ""};
-const store = createStore(reducers(initialState))
+const store = configureStore()
+const history = syncHistoryWithStore(browserHistory, store)
 
+const injectDevTools = () => {
+    if (__DEV__){
+    return(
+        <DevTools />
+    )}
+    return null;
+}
+
+var root = document.getElementById('root');
 ReactDOM.render(
         <Provider store={store}>
-        <App />
-        </Provider>, document.getElementById('root'));
+        <div>
+          <Router history={history}>
+            { Routes }
+          </Router>
+        { injectDevTools() }
+        </div>
+        </Provider>, root);

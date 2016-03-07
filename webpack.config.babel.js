@@ -23,6 +23,10 @@ const aliases = {
     actions: path.resolve(CLIENT_DIR, 'actions')
 };
 
+var devFlagPlugin = new webpack.DefinePlugin({
+  __DEV__: JSON.stringify(JSON.parse(process.env.DEBUG || false))
+});
+
 const config = {
     devtool: 'eval',
     entry: [
@@ -36,6 +40,7 @@ const config = {
         publicPath: '/static/'
     },
     plugins: [
+        devFlagPlugin,
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin('bundle.css')
     ],
