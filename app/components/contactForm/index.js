@@ -18,19 +18,24 @@ export default class ContactForm extends Component {
     return (
 
 <form onSubmit={handleSubmit}>
-  <div>
-    <label>First Name</label>
-    <div>
-      <input type="text" placeholder="First Name" {...firstName}/>
-      <input type="text" placeholder="Last Name" {...lastName}/>
-    </div>
-  </div>
-  <div>
-    <button onClick={handleSubmit}>Submit</button>
-  </div>
-  <div>
-  </div>
- </form>
+        <div>
+
+          <div>
+            <label>First Name: </label>
+  <input type="text" placeholder="First Name" {...firstName}/>
+
+          </div>
+            <div>
+            <label>Last Name: </label>
+          <input type="text" placeholder="Last Name" {...lastName}/>
+          </div>
+        </div>
+        <div>
+          <button onClick={handleSubmit}>Submit</button>
+        </div>
+       <div>
+      </div>
+     </form>
 
     );
   }

@@ -19,6 +19,7 @@ const DIST_DIR = path.resolve(__dirname, 'dist');
 
 const aliases = {
     components: path.resolve(CLIENT_DIR, 'components'),
+    containers: path.resolve(CLIENT_DIR, 'containers'),
     reducers: path.resolve(CLIENT_DIR, 'reducers'),
     actions: path.resolve(CLIENT_DIR, 'actions')
 };
@@ -48,7 +49,9 @@ const config = {
         includePaths: [path.resolve(__dirname, './app/stylesheets')]
     },
     postcss: [autoprefixer, csswring],
-    resolve: { alias: aliases },
+    resolve: { alias: aliases,
+               root: [
+                   path.resolve('./app/redux/modules')]},
     module: {
         loaders: [
             {

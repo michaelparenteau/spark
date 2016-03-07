@@ -3,7 +3,8 @@ import { routerReducer } from 'react-router-redux';
 import {reducer as formReducer} from 'redux-form';
 
 import {UPDATE_MESSAGE, ADD_MESSAGE} from 'actions'
-import countReducer from '../redux/modules/counter'
+
+import countReducer from 'counter';
 
 const initialState = {
     messages: [],

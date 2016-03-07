@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import {increment} from '../../redux/modules/counter'
+import {increment} from 'counter'
+
 
 require('./sampleComponent.scss');
 
