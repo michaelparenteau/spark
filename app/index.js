@@ -6,5 +6,7 @@ import styles from './stylesheets/screen.scss';
 
 // components
 import SampleComponent from './components/sampleComponent/sampleComponent';
+require("font-awesome-loader");
+
 
 ReactDOM.render(<SampleComponent />, document.getElementById('root'));

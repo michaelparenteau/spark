@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Icon from 'react-fa';
 
 require('./sampleComponent.scss');
 
@@ -10,7 +9,7 @@ export default class SampleComponent extends Component {
         <div className="sample-component">
           <h1>Spark says hello.</h1>
           <p>
-            <Icon name="check" />&nbsp;
+            <i className="fa fa-check"></i>
             This is a sample component.
           </p>
         </div>
