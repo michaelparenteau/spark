@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import {Provider} from 'react-redux';
 import { Router, Route, browserHistory } from 'react-router';
-import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
-import  App from 'containers';
+import { syncHistoryWithStore } from 'react-router-redux'
 import Routes from './routes';
 import DevTools from './containers/DevTools';
 import configureStore from './store'

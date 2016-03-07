@@ -61,14 +61,16 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.13",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.14.1",
+    "font-awesome-loader": "0.0.1"
   },
   "dependencies": {
-    "font-awesome-loader": "0.0.1",
+    "font-awesome": "^4.5.0",
     "history": "^2.0.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.4.0",
+    "react-router": "^2.0.0",
     "react-router-redux": "^4.0.0",
     "redux": "^3.3.1",
     "redux-form": "^4.2.0",
