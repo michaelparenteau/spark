@@ -1,5 +1,6 @@
-import { combineReducers, createStore, applyMiddleware, compose } from 'redux';
+import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
+import {reducer as formReducer} from 'redux-form';
 
 import {UPDATE_MESSAGE, ADD_MESSAGE} from 'actions'
 import countReducer from '../redux/modules/counter'
@@ -31,5 +32,6 @@ export const messageReducer = function(state=initialState, action) {
 }
 
 export default (combineReducers({countReducer,
+                                 form: formReducer,
                                  messageReducer,
                                  routing: routerReducer}));

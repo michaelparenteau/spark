@@ -14,7 +14,6 @@ function App({ children })  {
             { ' ' }
         </header>
             <div>
-            <a onClick={() => browserHistory.push('/foo')}>Go to /foo</a>
             </div>
             <div>{children}</div>
             </div>
