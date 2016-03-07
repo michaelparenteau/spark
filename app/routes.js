@@ -1,13 +1,9 @@
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
-import App from './containers/app';
-import sampleComponent from './components/sampleComponent/sampleComponent';
-import contactFormContainer from './containers/contactForm';
-
-const HomeComponent = () => (<div>
-                    <h3>Welcome to Spark.</h3>
-                    <p>This is a basic component</p>
-                   </div>)
+import App from 'containers/app';
+import sampleComponent from 'components/sampleComponent/sampleComponent';
+import contactFormContainer from 'containers/contactForm';
+import HomeComponent from 'components/Home'
 
 export default (
   <Route path="/" component={App} >
