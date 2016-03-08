@@ -40,12 +40,14 @@ const Messages = React.createClass(  {
 
     render(){
         return(
-                <div>
+                <div className="sample-container">
+                <div className="sample-component">
                 <h1>Message Logger</h1>
                 <MessageComponent messages={this.props.messageReducer.messages} />
                 <input value={this.props.messageReducer.currentMessage} onChange={this.handleChange} type="text" />
                 <button onClick={this.handleSubmit}>send</button>
                 <p>{this.props.currentMessage}</p>
+                </div>
                 </div>
         )
     }

@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ContactForm from '../../components/contactForm';
 
+
 @connect(state => ({form: state.form}))
 class contactFormContainer extends React.Component {
 
@@ -16,7 +17,8 @@ class contactFormContainer extends React.Component {
             formData = form.simple;
         }
         return (
-                <div id="app">
+                <div className="sample-container">
+                <div className="sample-component">
                 <h1>Simple Form</h1>
                 <ContactForm onSubmit={this.handleSubmit.bind(this)}/>
                 <h2>App State</h2>
@@ -28,6 +30,7 @@ class contactFormContainer extends React.Component {
                 {(formData && formData.lastName ?
                   formData.lastName.value : null)}
             </div>
+                </div>
         );
     }
 }
