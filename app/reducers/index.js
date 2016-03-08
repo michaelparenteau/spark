@@ -17,16 +17,16 @@ export const messageReducer = function(state=initialState, action) {
         return Object.assign({}, state, { currentMessage: action.message });
     case ADD_MESSAGE:
         const text = state.currentMessage.trim();
-
         if (text) {
             let messages = state.messages.map(message => Object.assign({}, message));
-            messages.push({id: messages.length + 1, text});
+        messages.push({id: messages.length + 1, text, timestamp: Date.now()});
 
             return {
                 messages,
                 currentMessage: ''
             };
         }
+
     default:
         return state;
     }

@@ -12,6 +12,8 @@ function App({ children })  {
             { ' ' }
             <Link to="/form-component">Form Component</Link>
             { ' ' }
+            <Link to="/message-component">Message Component</Link>
+            { ' ' }
         </header>
             <div>
             </div>
