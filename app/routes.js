@@ -5,6 +5,7 @@ import sampleComponent from 'components/sampleComponent/sampleComponent';
 import contactFormContainer from 'containers/contactForm';
 import HomeComponent from 'components/Home';
 import Messages from 'containers/Messages';
+import ValidationForm from 'containers/ValidationForm';
 
 export default (
   <Route path="/" component={App} >
@@ -12,5 +13,6 @@ export default (
     <Route path="sample-component" component={sampleComponent} />
     <Route path="form-component" component={contactFormContainer} />
     <Route path="message-component" component={Messages} />
+    <Route path="validation-form-component" component={ValidationForm} />
   </Route>
 );

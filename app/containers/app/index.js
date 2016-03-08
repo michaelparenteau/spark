@@ -14,6 +14,7 @@ function App({ children })  {
             { ' ' }
             <Link to="/message-component">Message Component</Link>
             { ' ' }
+            <Link to="/validation-form-component">Validation Form Component</Link>
         </header>
             <div>
             </div>
