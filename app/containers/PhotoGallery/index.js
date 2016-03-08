@@ -1,19 +1,5 @@
 import React, { Component } from 'react';
 
-function negArray(arr) {
-  return Proxy.create({
-    set: function (proxy, index, value) {
-        index = parseInt(index);
-        return index < 0 ? (arr[arr.length + index] = value) : (arr[index] = value);
-    },
-    get: function (proxy, index) {
-        index = parseInt(index);
-        return index < 0 ? arr[arr.length + index] : arr[index];
-    }
-  });
-}
-
-
 class PhotoGallery extends Component {
     constructor(props) {
         super(props);
