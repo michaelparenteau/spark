@@ -6,6 +6,7 @@ import contactFormContainer from 'containers/contactForm';
 import HomeComponent from 'components/Home';
 import Messages from 'containers/Messages';
 import ValidationForm from 'containers/ValidationForm';
+import PhotoGallery from 'containers/PhotoGallery';
 
 export default (
   <Route path="/" component={App} >
@@ -14,5 +15,6 @@ export default (
     <Route path="form-component" component={contactFormContainer} />
     <Route path="message-component" component={Messages} />
     <Route path="validation-form-component" component={ValidationForm} />
+    <Route path="photo-gallery-component" component={PhotoGallery} />
   </Route>
 );
