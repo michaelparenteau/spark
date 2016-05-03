@@ -36,14 +36,16 @@ const config = {
         './app/index.js'
     ],
     output: {
-        path: path.join(__dirname, DIST_DIR),
+        path: path.join(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/static/'
+        publicPath: ''
     },
     plugins: [
         devFlagPlugin,
         new webpack.HotModuleReplacementPlugin(),
-        new ExtractTextPlugin('bundle.css')
+        new webpack.NoErrorsPlugin(),
+        new ExtractTextPlugin('bundle.css'),
+        new HtmlWebpackPlugin({template: "html!./app/index.html"})
     ],
     sassLoader: {
         includePaths: [path.resolve(__dirname, './app/stylesheets')]
